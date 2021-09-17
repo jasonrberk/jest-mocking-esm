@@ -11,3 +11,9 @@ The [Mocking Modules Docs](https://jestjs.io/docs/mock-functions#mocking-modules
 >Please note that we currently don't support jest.mock in a clean way in ESM, but that is something we intend to add proper support for in the future. Follow this issue for updates.
 
 I can't get the provide example to work!!  What am I doing wrong????
+
+##
+
+1. clone the repo
+1. `cd` into the rep
+1. run `npm run test`
