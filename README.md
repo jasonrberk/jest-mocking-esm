@@ -12,7 +12,7 @@ The [Mocking Modules Docs](https://jestjs.io/docs/mock-functions#mocking-modules
 
 I can't get the provide example to work!!  What am I doing wrong????
 
-##
+## Usage
 
 1. clone the repo
 1. `cd` into the rep
