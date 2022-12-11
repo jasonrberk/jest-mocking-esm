@@ -1,13 +1,15 @@
 import {jest} from '@jest/globals';
-import SoundPlayer from './sound-player';
-import SoundPlayerConsumer from './sound-player-consumer';
+
 
 const mockPlaySoundFile = jest.fn();
-jest.mock('./sound-player', () => {
-  return jest.fn().mockImplementation(() => {
+jest.unstable_mockModule('./sound-player', () => ({
+  default: jest.fn().mockImplementation(() => {
     return {playSoundFile: mockPlaySoundFile};
-  });
-});
+  })
+}));
+
+const SoundPlayer = (await import('./sound-player')).default;
+const SoundPlayerConsumer = (await import('./sound-player-consumer')).default;
 
 beforeEach(() => {
   SoundPlayer.mockClear();
